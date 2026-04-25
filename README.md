@@ -58,15 +58,16 @@ Open the project folder and run `index.html` in your browser.
 
 ### 🏠 Hero Section
 
-![Hero](images/hero.jpg)
+[![Hero](images/hero.jpg)](images/hero.jpg)
 
 ### 🍔 Menu Section
 
-![Menu](images/cheeseburger.jpg)
+[![Menu](images/cheeseburger.jpg)](images/cheeseburger.jpg)
 
 ### 👨‍🍳 Chefs Section
 
-![Chefs](images/chefjohn.jpg)
+[![Chefs](images/chefjohn.jpg)](images/chefjohn.jpg)
+
 
 ---
 
