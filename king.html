@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>BurgerKing Website</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    /* Navbar */
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 60px;
+      background: #ffb703;
+    }
+
+    .logo {
+      font-size: 28px;
+      font-weight: 700;
+    }
+
+    .logo span {
+      color: #d62828;
+    }
+
+    .navbar nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: #000;
+      font-weight: 600;
+      position: relative;
+    }
+
+    .navbar nav a::after {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 2px;
+      background: #000;
+      left: 0;
+      bottom: -5px;
+      transition: 0.3s;
+    }
+
+    .navbar nav a:hover::after {
+      width: 100%;
+    }
+
+    .nav-btn {
+      margin-left: 25px;
+      padding: 10px 22px;
+      border: none;
+      border-radius: 25px;
+      background: #d62828;
+      color: #fff;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    /* Hero Section */
+    .hero {
+  height: 90vh;
+  background:
+    linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+    url("/hero.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+}
+
+
+    .hero h2 {
+      font-size: 60px;
+      font-weight: 700;
+    }
+
+    .hero p {
+      font-size: 20px;
+      margin: 15px 0;
+    }
+
+    .hero button {
+      padding: 14px 35px;
+      border: none;
+      border-radius: 30px;
+      background: #ffb703;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .hero button:hover {
+      background: #000;
+      color: #ffb703;
+    }
+
+    /* About */
+    section {
+      padding: 70px 60px;
+      text-align: center;
+    }
+
+    section h2 {
+      font-size: 36px;
+      margin-bottom: 15px;
+    }
+
+    section p {
+      color: #555;
+      line-height: 1.7;
+    }
+
+    /* Features */
+    .features {
+      background: #f9f9f9;
+    }
+
+    .feature-box {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 40px;
+      flex-wrap: wrap;
+    }
+
+    .feature {
+      width: 260px;
+      padding: 25px;
+      background: #fff;
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    }
+
+    /* Menu */
+    .menu {
+      background: #f5f5f5;
+    }
+
+    .menu-items {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 40px;
+      flex-wrap: wrap;
+    }
+
+    .card {
+      width: 260px;
+      background: #fff;
+      border-radius: 15px;
+      padding: 20px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .card h3 {
+      margin: 10px 0;
+    }
+
+    .card p {
+      color: #ffb703;
+      font-weight: bold;
+      font-size: 18px;
+    }
+
+    .card button {
+      margin-top: 10px;
+      padding: 8px 20px;
+      border: none;
+      border-radius: 20px;
+      background: #ffb703;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    /* Testimonials */
+    .testimonials {
+      background: #fff;
+      font-style: italic;
+    }
+
+    /* CTA */
+    .cta {
+      background: #ffb703;
+      color: #000;
+    }
+
+    .cta button {
+      margin-top: 15px;
+      padding: 12px 30px;
+      border: none;
+      border-radius: 30px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    /* Footer */
+    footer {
+      background: #222;
+      color: #fff;
+      padding: 25px;
+      text-align: center;
+      font-size: 14px;
+      letter-spacing: 1px;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .navbar {
+        flex-direction: column;
+      }
+
+      .hero h2 {
+        font-size: 40px;
+      }
+
+      section {
+        padding: 50px 20px;
+      }
+    }
+
+    /* Chefs Section */
+.chefs {
+  background: #f9f9f9;
+}
+
+.chef-box {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 40px;
+  flex-wrap: wrap;
+}
+
+.chef-card {
+  width: 220px;
+  background: #fff;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+.chef-card:hover {
+  transform: translateY(-10px);
+}
+
+.chef-card img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+
+.chef-card h3 {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.chef-card p {
+  color: #ffb703;
+  font-weight: 600;
+}
+
+  </style>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">Burger<span>King</span></div>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Menu</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+      <button class="nav-btn">Order Now</button>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div>
+      <h2>Best Burger In Town</h2>
+      <p>Fresh • Tasty • Delicious</p>
+      <button>Order Now</button>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section>
+    <h2>About Us</h2>
+    <p>We serve premium quality burgers made with fresh ingredients and love.</p>
+  </section>
+
+  <!-- Features -->
+  <section class="features">
+    <h2>Why Choose Us</h2>
+    <div class="feature-box">
+      <div class="feature">🍔 Fresh Ingredients</div>
+      <div class="feature">🚚 Fast Delivery</div>
+      <div class="feature">⭐ Best Quality</div>
+    </div>
+  </section>
+
+  <!-- Menu -->
+  <section class="menu">
+    <h2>Our Menu</h2>
+    <div class="menu-items">
+
+      <div class="card">
+        <img src="/cheeseburger.jpg">
+        <h3>Cheese Burger</h3>
+        <p>$8.00</p>
+        <button>Order</button>
+      </div>
+
+      <div class="card">
+        <img src="/chickenburger.jpg">
+        <h3>Chicken Burger</h3>
+        <p>$9.00</p>
+        <button>Order</button>
+      </div>
+
+      <div class="card">
+        <img src="/vegburger.jpg">
+        <h3>Veg Burger</h3>
+        <p>$7.00</p>
+        <button>Order</button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="testimonials">
+    <h2>Customer Reviews</h2>
+    <p>"Best burger experience ever!" ⭐⭐⭐⭐⭐</p>
+  </section>
+
+  <!-- Chefs Section -->
+<section class="chefs">
+  <h2>Our Expert Chefs</h2>
+  <p>Meet the people behind our delicious burgers</p>
+
+  <div class="chef-box">
+
+    <div class="chef-card">
+      <img src="/chefjohn.jpg" alt="Chef John">
+      <h3>Chef John</h3>
+      <p>Head Chef</p>
+    </div>
+
+    <div class="chef-card">
+      <img src="/chefemma.jpg" alt="Chef Emma">
+      <h3>Chef Emma</h3>
+      <p>Burger Specialist</p>
+    </div>
+
+    <div class="chef-card">
+      <img src="/chefalex.jpg" alt="Chef Alex">
+      <h3>Chef Alex</h3>
+      <p>Grill Master</p>
+    </div>
+
+  </div>
+</section>
+
+
+  <!-- CTA -->
+  <section class="cta">
+    <h2>Order Your Burger Now</h2>
+    <p>Fast delivery & best taste guaranteed</p>
+    <button>Order Now</button>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>Follow Us 🍔 📘 📸 🐦</p>
+    <p>© 2026 BurgerKing Website</p>
+  </footer>
+
+</body>
+</html>
