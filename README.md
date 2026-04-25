@@ -43,24 +43,32 @@ burgerking-project/
 
 ## ▶️ How to Run
 
-1. Clone the repository:
+Clone the repository:
 
 ```
-git clone https://github.com/yourusername/burgerking-project.git
+git clone https://github.com/AN-2005/burgerking-project.git
 ```
 
-2. Open the project folder
-
-3. Run `index.html` in your browser
+Open the project folder and run `index.html` in your browser.
 
 ---
 
-## 🌐 Live Demo
 
-https://github.com/AN-2005/burgerking-project
+## 📸 Screenshots
+
+### 🏠 Hero Section
+
+![Hero](images/hero.jpg)
+
+### 🍔 Menu Section
+
+![Menu](images/cheeseburger.jpg)
+
+### 👨‍🍳 Chefs Section
+
+![Chefs](images/chefjohn.jpg)
 
 ---
-
 
 ## 📌 Future Improvements
 
@@ -79,4 +87,4 @@ This project is for learning purposes only.
 
 ## 🙌 Acknowledgement
 
-Inspired by the design of Burger King.
+Inspired by Burger King.
